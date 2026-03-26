@@ -3,9 +3,9 @@ using MyProject.Models;
 
 
 //Hardware instances
-var projector = new Projector("XW5000", "Sony", true); 
-var camera = new Camera("No1", "IMAX", true); 
-var laptop = new Laptop("Extensa", "Acer", true); 
+var projector = new Projector("XW5000", "Sony", true, 300); 
+var camera = new Camera("No1", "IMAX", true, 64); 
+var laptop = new Laptop("Extensa", "Acer", true, 16); 
 
 //Users instances
 var student = new Student("Julek", "Jakobik");
