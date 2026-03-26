@@ -9,15 +9,25 @@ public class Rent(Hardware hardware, User user, DateTime from, DateTime to)
     public User User { get; set; } = user;
     public DateTime From { get; set; } = from >= to ? throw new ArgumentException("Starting date cannot be after End date.") : from;
     public DateTime To { get; set; } = to;
+
+    public bool WasReturnedOnTime { get; private set; } = false; 
+    public decimal Penalty { get; private set; } = 0;
     public bool IsCancelled { get; private set; } = false;
+    
+
+    public void Return(DateTime returnDate)
+    {
+        WasReturnedOnTime = returnDate <= To;
+        Penalty = WasReturnedOnTime ? 0 : 500; 
+    }
     
     public void Cancel()
     {
         IsCancelled = true;
     }
 
-    public bool Overlaps(DateTime from, DateTime to)
+    public bool Overlaps(Hardware hardware,DateTime from, DateTime to)
     {
-        return !(From > to || from > To);
+        return Hardware.Id == hardware.Id && !(From > to || from > To);
     }
 }

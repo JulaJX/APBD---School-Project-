@@ -14,7 +14,7 @@ var employee = new Employee("Michcio", "Tomaszywski");
 //Print out all instances
 Console.WriteLine("----------------------------------------------------------------------------------------------------");
 Console.WriteLine("");
-Console.WriteLine($"Student INFO:     ID:{student.Id}  FirstName: {student.FName} , Last Name: {student.LName}");
+Console.WriteLine($"Student INFO:     ID:{student.Id}      FirstName: {student.FName} , Last Name: {student.LName}");
 Console.WriteLine($"Employee INFO:    ID:{employee.Id}     First Name: {employee.FName} , Last Name: {employee.LName}");
 
 Console.WriteLine("");
