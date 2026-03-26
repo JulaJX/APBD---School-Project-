@@ -67,5 +67,4 @@ rentingService.CancelRent(3); //Test - cancel rent
 
 rentingService.GetActiveRents();
 
-
 rentingService.GetReturnedRents();
